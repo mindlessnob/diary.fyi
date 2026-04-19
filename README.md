@@ -315,17 +315,12 @@ Letterboxd CSV export         Letterboxd RSS feed
 **Q: Does this use the official Letterboxd API?**  
 A: No. It uses Letterboxd's **public RSS feed** (available for any public profile) and the **CSV export** you download from your settings. No Letterboxd API key is required.
 
-**Q: Will this work with a private Letterboxd profile?**  
-A: The RSS feed and profile scrape only work with **public** profiles. The CSV export still works, but live data (recent diary entries, avatar, follower count) won't be fetchable.
-
 **Q: Is my data safe?**  
 A: Yes. `lifetime.json` stays on your machine (or in your private repo). Your TMDB key lives in `.env.local`, which is gitignored and never committed. If you choose to commit `lifetime.json` to a **public** repo, note that your full watch history will be publicly visible — use a private repo if that's a concern.
 
 **Q: Can I deploy to a platform other than Vercel?**  
 A: Yes — it's a standard Next.js app. It works on any platform that supports Next.js (Netlify, Railway, Render, or self-hosted with `npm run build && npm start`).
 
-**Q: The sync is very slow. What can I do?**  
-A: The bottleneck is TMDB API rate limiting, which the sync script respects automatically. For very large libraries (5,000+ films), consider running it overnight. Once the initial sync is done, all subsequent incremental syncs are much faster.
 
 **Q: Some films are missing posters. Why?**  
 A: TMDB couldn't find a match — this usually happens with very obscure or non-English-title films. You can manually set a `posterOverride` URL in `favorites.json`, or use the Admin UI to configure overrides for any film in your diary.
