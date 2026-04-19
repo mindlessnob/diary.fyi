@@ -34,7 +34,7 @@ function posterUrl(m: Movie): string {
 
 export default function MonthStoryCard({
   month, movies, totalFilms, activeDays,
-  username, siteUrl = "moonboxd.vercel.app",
+  username, siteUrl = "diary.fyi",
 }: Props) {
   const monthName = MONTH_NAMES[month.getMonth()];
   const year      = month.getFullYear();

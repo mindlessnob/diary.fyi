@@ -28,7 +28,7 @@ const CARD_H = 960;
 
 function fmt(n: number) { return n.toLocaleString(); }
 
-export default function YearStoryCard({ stats, username, siteUrl = "moonboxd.vercel.app", yearLabel }: Props) {
+export default function YearStoryCard({ stats, username, siteUrl = "diary.fyi", yearLabel }: Props) {
   const displayLabel = yearLabel ?? String(stats.year);
   const isAllTime    = displayLabel === "All Time";
 

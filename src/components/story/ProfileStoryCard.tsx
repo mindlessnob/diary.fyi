@@ -30,7 +30,7 @@ export default function ProfileStoryCard({
   displayName, username, avatar, filmsWatched,
   avgRating, diaryEntries, uniqueCountries, uniqueDirectors,
   rewatchPct, favorites,
-  siteUrl = "moonboxd.vercel.app",
+  siteUrl = "diary.fyi",
 }: Props) {
   return (
     <div style={{

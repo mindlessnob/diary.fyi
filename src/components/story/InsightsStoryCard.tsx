@@ -20,7 +20,7 @@ const fmt = (n: number) => n.toLocaleString();
 export default function InsightsStoryCard({
   totalFilms, totalHours, avgRating,
   uniqueDirectors, uniqueCountries, topGenres,
-  siteUrl = "moonboxd.vercel.app",
+  siteUrl = "diary.fyi",
 }: Props) {
   const maxCount = topGenres[0]?.count ?? 1;
 
